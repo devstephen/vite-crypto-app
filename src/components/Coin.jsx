@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import { currencyFormat } from '../utils/util'
 
 const Coin = ({ coin }) => {
-  console.log(coin)
   return (
     <Link to={`/coin/${coin.id}`}>
       <div className='grid grid-cols-3 sm:grid-cols-4 font-light p-2 rounded border-gray-200 border-b hover:bg-gray-200'>
