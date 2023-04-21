@@ -9,9 +9,7 @@ const Markets = () => {
   return (
     <section className='mt-8'>
       <h1 className='text-2xl mb2'>Markets</h1>
-      {response?.map((coin) => (
-        <Coin key={coin.id} coin={coin} />
-      ))}
+      {response && response.map((coin) => <Coin key={coin.id} coin={coin} />)}
     </section>
   )
 }
