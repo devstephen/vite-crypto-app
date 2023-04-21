@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { LogoIcon } from '../icons/icon'
+import { LogoIcon } from '../icons/LogoIcon'
 
 const Navbar = () => {
   const navigate = useNavigate()

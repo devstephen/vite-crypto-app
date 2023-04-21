@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 import { currencyFormat } from '../utils/util'
+import { TrendingDown } from '../icons/TrendingDown'
+import { TrendingUp } from '../icons/TrendingUp'
 
 const Coin = ({ coin }) => {
   return (
@@ -18,6 +20,11 @@ const Coin = ({ coin }) => {
               : 'text-green-800'
           }`}
         >
+          {coin.price_change_percentage_24h < 0 ? (
+            <TrendingDown />
+          ) : (
+            <TrendingUp />
+          )}
           {coin.price_change_percentage_24h}
         </span>
         <div className='hidden sm:block'>
