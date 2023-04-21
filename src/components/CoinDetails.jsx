@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom'
 import useAxios from '../hooks/useAxios'
+import Skeleton from './Skeleton'
 
 const CoinDetails = () => {
   const { id } = useParams()
@@ -8,7 +9,12 @@ const CoinDetails = () => {
   )
 
   if (!response) {
-    return <div>Loading...</div>
+    return (
+      <div className='wrapper-container mt-8'>
+        <Skeleton className='h-8 w-32 mb-4' />
+        <Skeleton className='h-72 w-full mb-10' />
+      </div>
+    )
   }
 
   return (

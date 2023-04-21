@@ -43,7 +43,6 @@ const HistoryChart = () => {
     x: value[0],
     y: value[1].toFixed(2),
   }))
-  console.log(coinChartData)
 
   const options = {
     responsive: true,
